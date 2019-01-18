@@ -4,7 +4,7 @@
 设置画图的一系列问题
 
 '''
-
+import sys
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
@@ -16,20 +16,24 @@ import pylab
 
 
 #### 显示中文的设置
-# reload(sys)
-# sys.setdefaultencoding('utf-8')
+reload(sys)
+sys.setdefaultencoding('utf-8')
 # mpl.rcParams['font.sans-serif'] = ['SimHei'] # 指定默认字体，需要系统内有对应的字体
-# mpl.rcParams['axes.unicode_minus'] = False
+
+pylab.style.use('seaborn-ticks')
 
 ## 最大的chunksize
 mpl.rcParams['agg.path.chunksize'] = 10000
+mpl.rcParams['lines.linewidth'] = 1
+mpl.rcParams['lines.markersize'] = 4
+# mpl.rcParams['lines.markeredgecolor'] = '#D2D2D2'
 
 ## 颜色循环，取代默认的颜色
-color_sequence = ['#1f77b4', '#aec7e8', '#ff7f0e', '#ffbb78', '#2ca02c','#98df8a', '#d62728', '#ff9896', '#9467bd', '#c5b0d5',
-                '#8c564b', '#c49c94', '#e377c2', '#f7b6d2', '#7f7f7f',
-                '#c7c7c7', '#bcbd22', '#dbdb8d', '#17becf', '#9edae5']
+# color_sequence = ['#1f77b4', '#aec7e8', '#ff7f0e', '#ffbb78', '#2ca02c','#98df8a', '#d62728', '#ff9896', '#9467bd', '#c5b0d5',
+#                 '#8c564b', '#c49c94', '#e377c2', '#f7b6d2', '#7f7f7f',
+#                 '#c7c7c7', '#bcbd22', '#dbdb8d', '#17becf', '#9edae5']
 
-mpl.rcParams['axes.prop_cycle'] = cycler('color', color_sequence)
+# mpl.rcParams['axes.prop_cycle'] = cycler('color', color_sequence)
 
 ### 用特定的color theme进行画图
 # color = plt.cm.viridis(np.linspace(0.01,0.99,6)) # This returns RGBA; convert:
@@ -40,10 +44,10 @@ mpl.rcParams['axes.prop_cycle'] = cycler('color', color_sequence)
 
 ## 画图各种参数的大小
 params = {'legend.fontsize': 10,
-        'axes.labelsize': 15,
-        'axes.titlesize':20,
-        'xtick.labelsize':15,
-        'ytick.labelsize':15}
+        'axes.labelsize': 10,
+        'axes.titlesize':15,
+        'xtick.labelsize':10,
+        'ytick.labelsize':10}
 
 pylab.rcParams.update(params)
 

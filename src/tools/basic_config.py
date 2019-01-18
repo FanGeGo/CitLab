@@ -11,6 +11,8 @@ import logging
 import networkx as nx
 from networkx.algorithms import isomorphism
 from collections import Counter
+import scipy
+
 
 '''
 ==================
