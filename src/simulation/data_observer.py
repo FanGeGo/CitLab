@@ -821,7 +821,7 @@ def delta_num():
     plt.plot([1980]*10,np.linspace(0.001,1,10),'--',linewidth=0.5,c='r')
 
     plt.xlabel(u'年份(y)',fontproperties='SimHei')
-    plt.ylabel(u'p_{rs}(t|y)')
+    plt.ylabel('$p_{rs}(t|y)$')
     plt.yscale('log')
 
     art = plt.legend(prop={'family':'SimHei','size':8},loc=9,bbox_to_anchor=(0.5, -0.15), ncol=5)
@@ -1161,10 +1161,10 @@ if __name__ == '__main__':
     # ## 生成数据
     # extract_from_metadata()
     # ## 画图
-    # delta_num()
+    delta_num()
 
     # author_productivity()
-    compare_plots()
+    # compare_plots()
 
     # ID_plot()
 

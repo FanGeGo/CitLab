@@ -6,6 +6,10 @@ __pycache__/
 # C extensions
 *.so
 .DS_Store
+
+src/simulation/data/*
+src/simulation/fig/*
+
 # Distribution / packaging
 .Python
 build/
